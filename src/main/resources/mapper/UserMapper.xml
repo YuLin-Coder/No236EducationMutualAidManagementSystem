@@ -1,0 +1,136 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
+
+<mapper namespace="com.example.teach.mapper.UserMapper">
+        <select id="selectPersonalInformation" resultType="com.example.teach.bean.userBankCard">
+                select * from user where name = #{name }
+        </select>
+
+        <select id="selectUserInformation" resultType="com.example.teach.bean.userBankCard">
+                select * from user where name = #{name }
+        </select>
+
+        <update id="updateUserMessage" parameterType="com.example.teach.bean.User">
+                        update user set
+                                netname = #{netName },
+                                email = #{email},
+                                country = #{country},
+                                phone = #{phone},
+                                signature = #{signature}
+                        where id = #{id}
+        </update>
+
+        <select id="beforeInsertCardRepeat" resultType="com.example.teach.bean.Bank">
+                select * from bank where bankCard = #{card};
+        </select>
+
+        <insert id="addCardMessage">
+                insert into bank(bankUserID,bankName,bankCard,bankBalance) values (#{bankUserID},#{bankName},#{bankCard},1000)
+        </insert>
+
+        <update id="updatePassword">
+                update user set password = #{password} where id = #{id}
+        </update>
+
+        <delete id="deleteCard">
+                delete from bank where bankID = #{id}
+        </delete>
+
+        <insert id="sendMessage">
+                INSERT into opinion (opinionName,opinionphone,opinionEmail,opinionTime,opinionMessage,sendName)
+                VALUES(#{sendName},#{phone},#{email},#{time},#{message},#{name})
+        </insert>
+
+        <select id="selectCardMoney" resultType="int">
+                select bankBalance from bank where bankCard = #{bankCardNow}
+        </select>
+
+        <update id="updateCardMoney">
+                update bank set bankBalance = #{cardMoney} where bankCard = #{bankCardNow}
+        </update>
+
+        <update id="vxPay">
+                update user set vx = #{vx} where name = #{name }
+        </update>
+
+        <update id="zfbPay">
+                update user set zfb = #{zfb} where name = #{name }
+        </update>
+
+        <update id="myAccountUpdate">
+                update user set account = #{account} where name = #{name }
+        </update>
+
+        <select id="selectBankParameter" resultType="int">
+                select bankCard from bank where parameter = #{parameterBank} and bankUserID = #{userID}
+        </select>
+
+        <update id="updateBankCardNow">
+                update bank set parameter = #{parameter} where bankCard = #{bankCardNow} and bankUserID = #{userID}
+        </update>
+
+        <update id="updateBankCardAfter">
+                update bank set parameter = #{parameter} where bankCard = #{bankCardAfter} and bankUserID = #{userID}
+        </update>
+
+        <update id="payMoney">
+                update user set account = #{account}
+                where id = #{userID}
+        </update>
+
+        <update id="deleteCart">
+                update cart set cartParameter = 0 where cartID = #{cardID}
+        </update>
+
+        <select id="selectAdminUser" resultType="com.example.teach.bean.User">
+                select * from user;
+        </select>
+
+        <delete id="deleteUser">
+                delete from user where id = #{id}
+        </delete>
+
+        <delete id="deleteNews">
+                delete from news where id = #{id}
+        </delete>
+        
+        <select id="selectOpinion" resultType="com.example.teach.bean.Opinion">
+                select * from opinion;
+        </select>
+
+        <delete id="deleteOpinion">
+                delete from opinion where opinionID = #{id}
+        </delete>
+
+        <select id="selectAdmin" resultType="com.example.teach.bean.Admin">
+                select * from admin;
+        </select>
+
+        <delete id="deleteAdmin">
+                delete from admin where id = #{id}
+        </delete>
+
+        <select id="selectSellMoney" resultType="int">
+                select account from user where name = #{isSellPerson};
+        </select>
+
+        <update id="addSellMoney">
+                update user set account = #{priceTotal} where name = #{isSellPerson};
+        </update>
+
+        <select id="selectCartById" resultType="com.example.teach.bean.Cart">
+                select * from cart where cartID = #{cartID};
+        </select>
+        
+        <select id="selectAdminAccount" resultType="int">
+                select account from admin where name = #{isSellPerson};
+        </select>
+
+        <update id="addAdminAccount">
+                update admin set account = #{cartPrice} where name = #{isSellPerson}
+        </update>
+
+        <select id="selectSell" resultType="int">
+                select account from admin where name = #{name }
+        </select>
+</mapper>

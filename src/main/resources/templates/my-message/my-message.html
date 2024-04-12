@@ -1,0 +1,273 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <title>我的社交平台</title>
+    <link rel="stylesheet" href="../css/vendor/bootstrap.min.css">
+    <link rel="stylesheet" href="../css/vendor/font-awesome.min.css">
+    <link rel="stylesheet" href="../css/style.css">
+    <link href="../css/CustomerIndex.css" type="text/css" rel="stylesheet" />
+    <link href="../css/global.css" type="text/css" rel="stylesheet" />
+    <style>
+        .thumbs_button{
+            width: 120px;
+            height: 40px;
+            line-height: 40px;
+            font-weight:bold;
+            font-size:16px;
+            -webkit-border-radius: 0 0 0 25px;
+            margin-left: 20px;
+        }
+        .chat.icon {
+            color: darkorange;
+            position: absolute;
+            margin-left: 2px;
+            margin-top: 4px;
+            width: 15px;
+            height: 10px;
+            border: solid 1px currentColor;
+            border-radius: 2px;
+        }
+
+        .chat.icon:before {
+            content: '';
+            position: absolute;
+            left: 3px;
+            top: 8px;
+            width: 4px;
+            height: 4px;
+            -webkit-transform: rotate(45deg);
+            transform: rotate(45deg);
+            background-color: white;
+            border-bottom: solid 1px currentColor;
+            border-right: solid 1px currentColor;
+        }
+        input,
+        textarea {
+            outline: none;
+            border: none;
+            display: block;
+            margin: 0;
+            padding: 0;
+            -webkit-font-smoothing: antialiased;
+            font-family: "PT Sans", "Helvetica Neue", "Helvetica", "Roboto", "Arial", sans-serif;
+            font-size: 1rem;
+            color: #555f77;
+        }
+        input::-webkit-input-placeholder,
+        textarea::-webkit-input-placeholder {
+            color: #ced2db;
+        }
+        input::-moz-placeholder,
+        textarea::-moz-placeholder {
+            color: #ced2db;
+        }
+        input:-moz-placeholder,
+        textarea:-moz-placeholder {
+            color: #ced2db;
+        }
+        input:-ms-input-placeholder,
+        textarea:-ms-input-placeholder {
+            color: #ced2db;
+        }
+        p {
+            line-height: 1.3125rem;
+        }
+        .comments {
+            margin: 2.5rem auto 0;
+            max-width: 60.75rem;
+            padding: 0 1.25rem;
+        }
+        .comment-wrap {
+            margin-bottom: 1.25rem;
+            display: table;
+            width: 100%;
+            min-height: 5.3125rem;
+        }
+        .photo {
+            padding-top: 0.625rem;
+            display: table-cell;
+            width: 3.5rem;
+        }
+        .photo .avatar {
+            height: 2.25rem;
+            width: 2.25rem;
+            border-radius: 50%;
+            background-size: contain;
+        }
+        .comment-block {
+            padding: 1rem;
+            background-color: #fff;
+            display: table-cell;
+            vertical-align: top;
+            border-radius: 0.1875rem;
+            box-shadow: 0 1px 3px 0 rgba(0, 0, 0, 0.08);
+        }
+        .comment-block textarea {
+            width: 100%;
+            max-width: 100%;
+        }
+        .comment-text {
+            margin-bottom: 1.25rem;
+        }
+        .bottom-comment {
+            color: #acb4c2;
+            font-size: 0.875rem;
+        }
+        .comment-date {
+            float: left;
+        }
+        .comment-actions {
+            float: right;
+        }
+        .comment-actions li {
+            display: inline;
+        }
+        .comment-actions li.complain {
+            padding-right: 0.625rem;
+            border-right: 1px solid #e1e5eb;
+        }
+        .comment-actions li.reply {
+            padding-left: 0.625rem;
+        }
+    </style>
+</head>
+
+<body>
+<header class="header-area" style="margin-left: -20px">
+    <div class="main-header d-none d-lg-block">
+        <div class="header-top black-bg">
+            <div class="container">
+                <div class="row align-items-center">
+                    <div class="col-lg-6">
+                        <div class="top-left-navigation">
+                            <ul class="nav align-items-center">
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="col-lg-6 d-flex justify-content-end">
+                        <ul class="user-info-block">
+                            <li><a href="../my-setting/my-setting.html"><i class="fa fa-user-circle"></i>我的信息</a></li>
+                            <li><a href="../login.html" style="text-decoration: none"><i class="fa fa-sign-in"></i> 注销 </a></li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="header-main-area black-soft sticky">
+            <div class="container">
+                <div class="row align-items-center position-relative">
+
+                    <div class="col-auto">
+                        <div class="logo">
+                            <a href="../index.html">
+                                <img src="../img/teach/3.jpg" alt="Brand Logo" style="height: 91px;width: 160px">
+                            </a>
+                        </div>
+                    </div>
+
+                    <div class="col-auto position-static">
+                        <div class="main-menu-area">
+                            <div class="main-menu">
+
+                                <nav class="desktop-menu">
+                                    <ul>
+
+                                        <li class="position-static"><a href="../index.html" style="text-decoration: none">教育主页</a>
+
+                                        </li>
+                                         <li><a href="../dynamic/Dynamic.html" style="text-decoration: none">
+                                            交流动态 </a>
+                                        </li>
+                                        <li class="active"><a href="../my-message/my-message.html" style="text-decoration: none">我的平台</a>
+                                        </li>
+                                        <li><a href="../chat/my-chat.html" style="text-decoration: none">我的好友</a>
+                                        </li>
+                                        <li><a href="../contact-us/contact-us.html" style="text-decoration: none">联系我们</a></li>
+                                    </ul>
+                                </nav>
+
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="col-auto ml-auto">
+                        <div class="header-right">
+                            <div class="header-configure-area">
+                                <ul class="nav">
+
+
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+        </div>
+    </div>
+</header>
+
+<h1 align="center" style="color: #a3a3a3">我的社交平台</h1>
+
+<!--隐藏此上传-->
+<img src="" style="border: none;display: none" id="picture" width="300px" height="180px"><br>
+<input type="file" id="file" accept="image/*" style="display: none">
+
+<!--动态-->
+<div id="container">
+
+    <div id="main" style="margin-top: 80px">
+        <!--左侧-->
+        <div id="mainBanner">
+            <!--首页-->
+            <div id="mainBannerTitle">
+                <div id="mainBannerTitleWord"><b>我的首页</b>
+                </div>
+            </div>
+
+            <!--动态界面渲染-->
+            <div id="mainBannerContent">
+            </div>
+
+        </div>
+        <!--右侧-->
+        <div id="mainRight">
+            <table width="200" border="0" cellpadding="0" cellspacing="0" bgcolor="#E9F4FA">
+                <tr>
+                    <td bgcolor="#E9F4FA">
+                        <div id="mainRightPostionFirstLine">
+                            <div>
+                                <div id="mainRightPostionFirstLineIcon">
+                                    <a href="../my-setting/my-setting.html"><img src="" id="myHead" alt="" width="80" height="70" align="absmiddle" title="" border="0" /></a><br>
+                                    <h6 id="userName" style="text-align: center;"></h6>
+                                </div>
+                            </div>
+                            <div id="mainRightPostionFirstLineWord2">
+                                <ul>
+                                    <a href="#" class="a1"><li><font class="style1" id="VBNum"></font><br /><font class="style2">动态</font></li></a>
+                                    <a href="#" class="a1"><li><font class="style1" id="VBAttention"></font><br /><font class="style2">关注</font></li></a>
+                                    <a href="#" class="a1"><li><font class="style1" id="VBWhoAttentionMe">23</font><br /><font class="style2">粉丝</font></li></a>
+                                </ul>
+                            </div>
+                        </div>
+
+                    </td>
+                </tr>
+
+            </table>
+        </div>
+    </div>
+</div>
+
+<script src="../js/vendor/jquery-3.3.1.min.js"></script>
+<script src="../js/main.js"></script>
+<script src="../js/jquery.cookie.js"></script>
+<script src="../cart/Cart.js"></script>
+<script src="../shop/Shop.js"></script>
+<script src="../js/layer/layer.js"></script>
+<script src="../index.js"></script>
+<script src="my-message.js" ></script>
+</body>
+</html>

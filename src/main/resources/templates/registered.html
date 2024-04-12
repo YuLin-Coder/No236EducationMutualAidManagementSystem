@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+
+    <head>
+        <meta charset="utf-8">
+        <title>Login</title>          
+        <link rel="stylesheet" href="css/vendor/bootstrap.min.css">
+		<link rel="stylesheet" href="css/vendor/form-elements.css">
+        <link rel="stylesheet" href="css/style.css">
+    </head>
+    <style>
+        body{
+            text-align: center;
+        }
+    </style>
+    <body>
+        
+        <div class="top-content" style="margin-left: 400px">
+        	
+            <div class="inner-bg">
+                <div class="container">
+                    <div class="row">
+                        <div class="col-sm-8 col-sm-offset-2 text">
+                            <h1>注册新账户！</h1>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-sm-6 col-sm-offset-3 form-box" style="margin-left: 100px;">
+                        	<div class="form-top">
+                        		<div class="form-top-left">
+                        			<h3>请输入注册新账户的基本信息</h3>
+                        		</div>
+                        		<div class="form-top-right">
+                        			<i class="fa fa-lock"></i>
+                        		</div>
+                            </div>
+                            <div class="form-bottom">
+			                    	<div class="form-group">
+			                        	<span style="color: #a3a3a3;font-size: 20px">用户名：</span>
+                                        <input type="text" placeholder="请输入用户名长度不可大于8位" class="form-username form-control" id="username">
+			                        </div>
+			                        <div class="form-group">
+                                        <span style="color: #a3a3a3;font-size: 20px">密码：</span>
+                                        <input type="password" placeholder="请输入密码" class="form-password form-control" id="password1">
+			                        </div>
+                                    <div class="form-group">
+                                        <span style="color: #a3a3a3;font-size: 20px">请再次确认：</span>
+                                        <input type="password" placeholder="请再次确认..." class="form-password form-control" id="password2">
+                                    </div>
+                                    <div class="form-group">
+                                        <span style="color: #a3a3a3;font-size: 20px">电话：</span>
+                                        <input type="text" placeholder="请输入有效手机号码11位" class="form-password form-control" id="phone">
+                                    </div>
+                                    <div class="form-group">
+                                        <span style="color: #a3a3a3;font-size: 20px">邮箱：</span>
+                                        <input type="text" placeholder="请输入正确的邮箱" class="form-password form-control" id="email">
+                                    </div>
+                                    <div class="form-group">
+                                        <span style="color: #a3a3a3;font-size: 20px">国家：</span>
+                                        <input type="text" placeholder="请输入所在地" class="form-password form-control" id="country">
+                                    </div>
+			                        <button class="btn" onclick="nameRepeatYesOrNo()">确定注册</button>
+		                    </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+        </div>
+
+        <script src="js/vendor/jquery-3.3.1.min.js"></script>
+        <script src="js/vendor/bootstrap.min.js"></script>
+        <script src="js/vendor/jquery.backstretch.min.js"></script>
+        <script src="js/vendor/scripts.js"></script>
+        <script src="js/md5.js"></script>
+        <script src="js/jquery.cookie.js"></script>
+        <script src="index.js"></script>
+        <script src="registered.js"></script>
+    </body>
+
+</html>

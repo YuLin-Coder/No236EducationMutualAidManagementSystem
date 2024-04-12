@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
+
+<mapper namespace="com.example.teach.mapper.LoginMapper">
+        <select id="loginMessage" resultType="com.example.teach.bean.User">
+                select * from user where name = #{name} and password = #{password}
+        </select>
+
+        <select id="forget" resultType="com.example.teach.bean.User">
+                select * from user where name = #{name } and phone = #{phone}
+        </select>
+
+        <!--等试试parameterType不写情况-->
+        <insert id="registered" parameterType="com.example.teach.bean.User">
+                insert into user(name ,password,phone,email,country,vx,zfb)
+                values (#{name},#{password},#{phone},#{email},#{country},500,500)
+        </insert>
+
+        <select id="nameRepeatYesOrNo" resultType="com.example.teach.bean.User">
+                select * from user where name = #{name};
+        </select>
+        <select id="loginAdmin" resultType="com.example.teach.bean.Admin">
+                select * from admin where name = #{name} and password = #{password}
+        </select>
+</mapper>

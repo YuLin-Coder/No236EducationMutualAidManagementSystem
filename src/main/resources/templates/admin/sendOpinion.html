@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title>意见管理</title>
+		<link rel="stylesheet" type="text/css" href="../ACredit/Css/identify.css" />
+		<link rel="stylesheet" type="text/css" href="../ACredit/Css/layout.css" />
+		<link rel="stylesheet" type="text/css" href="../ACredit/Css/style.css" />
+		<link rel="stylesheet" type="text/css" href="../ACredit/Css/control_index.css" />
+		<script type="text/javascript" src="../ACredit/Js/jquery-1.7.2.min.js"></script>
+		<script type="text/javascript" src="../ACredit/Js/haidao.offcial.general.js"></script>
+		<script type="text/javascript" src="../ACredit/Js/select.js"></script>
+		<script type="text/javascript" src="../ACredit/Js/haidao.validate.js"></script>
+		<script src="sendOpinion.js"></script>
+	</head>
+
+	<body>
+		<div class="view-topbar">
+			<div class="topbar-console">
+				<div class="tobar-head fl">
+					<a href="#" class="topbar-logo fl">
+					<span><img src="../ACredit/Images/logo.png" width="20" height="20"/></span>
+					</a>
+					<a href="#" class="topbar-home-link topbar-btn text-center fl"><span>管理员</span></a>
+				</div>
+			</div>
+			<div class="topbar-info">
+				<ul class="fr">
+					
+					<li class="fl topbar-info-item">
+					<div class="dropdown">
+						<a href="#" class="topbar-btn">
+						<span class="fl text-normal" id="admin"></span>
+						<span class="icon-arrow-down"></span>
+						</a>
+						<ul class="dropdown-menu">
+							<li><a href="../adminLogin.html">退出</a></li>
+						</ul>
+					</div>
+					</li>
+				</ul>
+			</div>
+		</div>
+		<div class="view-body">
+			<div class="view-sidebar">
+				<div class="sidebar-content">
+					<div class="sidebar-nav">
+						<ul class="sidebar-trans" style="margin-top: 10px">
+							<div id="opinionHidden">
+								<li id="hiddenUser">
+									<a href="adminUser.html" id="hiddenUserHref">
+										<b class="sidebar-icon"><img src="../ACredit/Images/icon_author.png" width="16" height="16" /></b>
+										<span class="text-normal" style="font-size: 15px">用户管理</span>
+									</a>
+								</li>
+
+								<li id="hiddenOpinion">
+									<a href="sendOpinion.html" id="hiddenOpinionHref">
+										<b class="sidebar-icon"><img src="../ACredit/Images/icon_message.png" width="16" height="16" /></b>
+										<span class="text-normal" style="font-size: 15px">意见管理</span>
+									</a>
+								</li>
+								<li id="hiddenDynamic">
+									<a href="discussDynamic.html" id="hiddenDynamicHref">
+										<b class="sidebar-icon"><img src="../ACredit/Images/icon_message.png" width="16" height="16" /></b>
+										<span class="text-normal" style="font-size: 15px">互助评论管理</span>
+									</a>
+								</li>
+								<li id="hiddenAllDynamic">
+									<a href="allDynamic.html" id="hiddenAllDynamicHref">
+										<b class="sidebar-icon"><img src="../ACredit/Images/icon_message.png" width="16" height="16" /></b>
+										<span class="text-normal" style="font-size: 15px">教育互助管理</span>
+									</a>
+								</li>
+								<li>
+									<a href="admin.html">
+										<b class="sidebar-icon"><img src="../ACredit/Images/icon_message.png" width="16" height="16" /></b>
+										<span class="text-normal" style="font-size: 15px">管理员</span>
+									</a>
+								</li>
+							</div>
+
+						</ul>
+					</div>
+				</div>
+			</div>
+			<div class="view-product">
+				<div class="message-manage">
+					<div class="manage-head">
+						<h6 class="padding-left manage-head-con">意见管理</h6>
+					</div>
+					<div class="manage-detail">
+						<div class="margin-tb manage-detail-con clearfix">
+							<a class="h5 recharge fl" href="#" style="width: 200px">所有意见汇总</a>
+<!--							<a class="h5 margin-large-left custom fl" href="#">自定义短信</a>-->
+						</div>
+					</div>
+					<div class="manage-record margin-lr">
+						<div class="offcial-table margin-top clearfix">
+							<div class="tr-th clearfix">
+								<div class="th w05">
+									意见序号
+								</div>
+								<div class="th w12">
+									意见发布者
+								</div>
+								<div class="th w10">
+									意见人邮箱
+								</div>
+								<div class="th w40">
+									意见内容
+								</div>
+								<div class="th w05">
+									发送时间
+								</div>
+								<div class="th w05">
+									意见人电话
+								</div>
+								<div class="th w15">
+									操作
+								</div>
+							</div>
+							<div class="tr clearfix border-bottom-none" id="AdminShopHtml">
+
+							</div>
+							<div class="non-info" style="display:none">
+								<span>没有任何记录</span>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+
+	</body>
+
+</html>
+<script src="../js/jquery.cookie.js"></script>
+<script src="../js/layer/layer.js"></script>
+<script src="common.js"></script>

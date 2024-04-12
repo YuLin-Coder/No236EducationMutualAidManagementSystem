@@ -1,0 +1,130 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
+
+<mapper namespace="com.example.teach.mapper.CartMapper">
+        <select id="selectShop" resultType="com.example.teach.bean.Cart">
+                select * from cart
+                <where>
+                        <if test="cartName!=null and cartName!=''">
+                                and cartName like CONCAT('%',#{cartName},'%')
+                        </if>
+
+                        <if test="priceMin!=0 and priceMax!=0">
+                                and cartPrice between #{priceMin} and #{priceMax}
+                        </if>
+                        and isSell = #{isSell}
+                </where>
+                limit #{shopMinNum},#{showPage}
+        </select>
+
+        <select id="selectNews" resultType="com.example.teach.bean.News">
+                select * from news
+                <where>
+                        <if test="newsName!=null and newsName!=''">
+                                and newsName like CONCAT('%',#{newsName},'%')
+                        </if>
+                </where>
+                limit #{shopMinNum},#{showPage}
+        </select>
+
+        <select id="selectAdminNews" resultType="com.example.teach.bean.News">
+                select * from news;
+        </select>
+
+        <select id="selectAdminShop" resultType="com.example.teach.bean.Cart">
+                select * from cart where isBuy != 1;
+        </select>
+
+        <update id="addToCart">
+                update cart set cartParameter = #{param},cartNumber = #{num},cartUserID=#{userID} where cartID = #{id}
+        </update>
+
+        <select id="selectCart" resultType="com.example.teach.bean.Cart">
+                select * from cart where cartParameter = #{param} and cartUserID = #{userID}
+        </select>
+
+        <update id="cartNumberChange">
+                update cart set cartNumber= #{cartNum}  where cartID = #{cartID};
+        </update>
+
+        <select id="totalQuantity" resultType="int">
+                select cartNumber from cart where cartParameter = #{param} and cartUserID = #{userID}
+        </select>
+
+        <update id="cartRemove">
+                update cart set cartParameter = #{cartParam} where cartID = #{cartID}
+        </update>
+
+        <insert id="addCart">
+                insert into cart(cartPath,cartPrice,cartNumber,cartName,cartParameter,cartUserID)
+                values(#{shoesImg},#{shoesPrice},#{nowQty},#{shoesName},#{param},#{userID})
+        </insert>
+
+        <select id="selectShopNum" resultType="int">
+                select count(*) from cart
+        </select>
+
+        <select id="selectCollectShoes" resultType="com.example.teach.bean.Collect">
+                select * from collection where collectParam = #{param} and collectUserID = #{userID}
+        </select>
+
+        <insert id="addToCollect">
+                insert into collection(collectPath, collectUserID, collectName, collectPrice, collectParam)
+                values (#{collectPath,jdbcType=VARCHAR},#{collectUserID},#{collectName},#{collectPrice},#{collectParam})
+        </insert>
+
+        <update id="cancelCollect">
+                update collection set collectParam = #{param} where collectID = #{collectID}
+        </update>
+
+        <update id="payMoney">
+                update user set account = #{account} where id = #{userID}
+        </update>
+
+        <update id="sureAdd">
+                update cart set isSell = #{IsSell} where cartID = #{cartID}
+        </update>
+
+        <delete id="deleteShop">
+                delete from cart where cartID = #{cartID}
+        </delete>
+        
+        <select id="selectMyThings" resultType="com.example.teach.bean.Cart">
+                select * from cart where MyArticle > 0 and cartUserID = #{userID};
+        </select>
+
+        <select id="selectCartByID" resultType="com.example.teach.bean.Cart">
+                select * from cart where cartID = #{id};
+        </select>
+        
+        <update id="updateCart">
+                update cart set MyArticle = #{MyArticle},isBuy = 0,sellID = #{userID},sellName = #{sellName},
+                cartIntroduce = #{introduce},cartPrice=#{price}
+                where cartID = #{id};
+        </update>
+        
+        <update id="changeShopIsSell">
+                update cart set isSell = 0,isBuy = 1 where cartID = #{id};
+        </update>
+        
+        <select id="selectMyIsSell" resultType="com.example.teach.bean.Cart">
+                select * from cart where cartUserID = #{userID} and isSell = #{isSell} and MyArticle &lt; 0;
+        </select>
+
+        <update id="cancelSJ">
+                update cart set MyArticle = #{MyArticle} , isSell= 0,isBuy = 1 where cartID = #{id};
+        </update>
+    
+        <select id="selectTanKuang" resultType="com.example.teach.bean.News">
+             select * from news where id = #{id};
+        </select>
+
+        <select id="clickNewsComment" resultType="com.example.teach.bean.Discuss">
+                select * from discuss where beCommentedID = #{id} ;
+        </select>
+        
+        <insert id="sendNewsComment">
+                insert into discuss (beCommentedID,person,time,content,photo)
+                values (#{beCommentedID},#{person},#{time},#{content},#{photo});
+        </insert>
+</mapper>

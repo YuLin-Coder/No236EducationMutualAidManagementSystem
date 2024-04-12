@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+	<meta charset="utf-8">
+	<title>管理员登录平台</title>
+	<link rel="stylesheet" href="css/vendor/bootstrap.min.css">
+	<link rel="stylesheet" href="css/vendor/form-elements.css">
+	<link rel="stylesheet" href="css/style.css">
+</head>
+<style>
+	body{
+		text-align: center;
+	}
+</style>
+<body>
+
+<div class="top-content" style="margin-left: 400px">
+
+	<div class="inner-bg">
+		<div class="container">
+			<div class="row">
+				<div class="col-sm-8 col-sm-offset-2 text">
+					<h1>管理员登录平台</h1>
+				</div>
+			</div>
+			<div class="row">
+				<div class="col-sm-6 col-sm-offset-3 form-box" style="margin-left: 100px;">
+					<div class="form-top">
+						<div class="form-top-left">
+							<h3>登录您的账户</h3>
+							<p>输入您的账户和密码并点击登录按钮进入</p>
+						</div>
+						<div class="form-top-right">
+							<i class="fa fa-lock"></i>
+						</div>
+					</div>
+					<div class="form-bottom">
+						<div class="form-group">
+							<input type="text" placeholder="用户名..." class="form-username form-control" id="name">
+						</div>
+						<div class="form-group">
+							<input type="password" placeholder="密码..." class="form-password form-control" id="password">
+						</div>
+						<button class="btn" onclick="loginAdmin()">登录</button>
+					</div>
+				</div>
+			</div>
+
+		</div>
+	</div>
+
+</div>
+
+<script src="js/vendor/jquery-3.3.1.min.js"></script>
+<script src="js/vendor/bootstrap.min.js"></script>
+<script src="js/vendor/jquery.backstretch.min.js"></script>
+<script src="js/vendor/scripts.js"></script>
+<script src="js/md5.js"></script>
+<script src="js/jquery.cookie.js"></script>
+<script src="adminLogin.js"></script>
+
+</body>
+
+</html>

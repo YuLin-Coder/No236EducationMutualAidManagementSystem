@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
+
+<mapper namespace="com.example.teach.mapper.AttentionMapper">
+        
+        <select id="beforePayAttention" resultType="com.example.teach.bean.Attention">
+                select * from attention where attentionName = #{attentionName} and attentionWhoName = #{attentionWhoName};
+        </select>
+
+        <insert id="payAttention">
+                insert into attention (attentionName, attentionWhoName)
+                values (#{attentionName},#{attentionWhoName});
+        </insert>
+
+        <select id="selectVBAttention" resultType="int">
+                select count(*) from attention where attentionWhoName = #{attentionWhoName};
+        </select>
+
+        <select id="selectWhoAttentionMe" resultType="int">
+                select count(*) from attention where attentionName = #{attentionName};
+        </select>
+        
+        <select id="selectMyArticle" resultType="com.example.teach.bean.Cart">
+                select * from cart where MyArticle = #{MyArticle} and cartUserID = #{userID};
+        </select>
+        
+        <update id="updateMyArticle">
+                update cart set MyArticle = 0  where cartID = #{cartID};
+        </update>
+
+        <update id="sureMyArticle">
+                update cart set MyArticle = #{MyArticle}  where cartID = #{cartID};
+        </update>
+</mapper>

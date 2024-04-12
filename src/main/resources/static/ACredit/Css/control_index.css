@@ -1,0 +1,46 @@
+
+/*控制台首页*/
+.view-product{min-width: 1075px;}
+.background-color{background: #f2f2f2;height:100%;}
+.text-box-main{border: 1px solid #e6e7e9;background: #fff;}
+
+.account-info .text-box-main{margin-right: 1%;}
+.account-info dt{height: 88px;}
+.account-info dt .title p{color: #2f2f2f; }
+.min-width-300{width: 31.4%;}
+.min-width-360{width: 35.2%;}
+.button{border:0;}
+.button.icon{background: url(../images/icon_control.png) no-repeat}
+.button.bg-blue-deep{background-color: #3498db;color: #fff;}
+.button.bg-blue-deep:hover{background-color: #44a1df;}
+.button.icon-button-blue{background-position: 4px -48px;}
+.button.bg-green-deep{background-color: #1eb86b;color: #fff;}
+.button.bg-green-deep:hover{background-color: #34c87e;}
+.button.icon-button-green{background-position: 4px -71px;}
+.account-info .button{padding: 2px 6px;padding-left: 20px;border-radius: 4px;}
+.account-info dt .icon-head img{width: 88px;height: 88px;}
+.text-golden{color: #ffb000;}
+.account-product .orange{color: #ea544a;}
+.account-info dt .title .text-sliver{color: #929292;}
+.account-info dd{height: 85px;}
+.account-info dd i{display: inline-block;padding-top: 3px;width: 16px;height: 25px;}
+
+.icon-mobile{background-position: 3px 5px;}
+.icon-email{background-position: -24px 6px;}
+.icon-wechat{background-position: 0px -16px;}
+.icon-password{background-position: -23px -18px;}
+.account-info .btn-red{padding: 0 10px;margin-top: 2px;}
+.btn-red{background: #ee5858;}
+.btn-red:hover{color: #fff;background: #eb756e;}
+.account-info .btn-orange{margin-top: 5px;padding: 6px 10px;}
+.btn-orange{background: #e67e22;}
+.btn-orange:hover{color: #fff;background: #e28839;}
+.text-hidden{width: 100%;height: 100%;overflow: hidden;}
+.account-info .account-class a{margin-right: 25px;display: inline-block;line-height: 25px;}
+.margin-right-none{margin-right: 0 !important;}
+/*产品*/
+.account-product .mine-product{width: 72%;margin-right: 3%;}
+.lists-border-list{border-bottom: 1px solid #e6e7e9;}
+.border-list-text{line-height: 50px;padding: 0 20px;}
+.lists-list{width: 100%;height: 34px;line-height: 34px;overflow: hidden;}
+

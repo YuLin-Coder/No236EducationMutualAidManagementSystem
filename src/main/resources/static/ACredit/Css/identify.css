@@ -1,0 +1,73 @@
+/*认证类型*/
+.indentify{padding-bottom: 20px;}
+.class-attention{color:#0098ce;height:60px;line-height:60px;}
+.class-detail{ display: block; width:308px; height:380px; border:1px solid #eee; position: relative; -webkit-user-select: none;}
+.class-detail-top { padding: 32px 20px 0; height: 338px; }
+.class-detail-top .indentify-icon img{display:inline-block;width:76px;height:70px;}
+.class-detail-top .title {text-align:center;color:#161616;line-height:24px;margin-bottom:20px;}
+.class-detail-top .info { line-height: 20px; color: #797979; line-height: 20px; overflow: hidden; border-bottom: 1px solid #c0c0c0; }
+.class-detail-top h6{height:40px;overflow:hidden;color:#797979;line-height:20px; word-spacing:10px;}
+.class-detail-has h6{height:25px;}
+.class-detail-has span{line-height:25px;}
+.class-detail .continue {width: 308px; line-height: 38px; text-align: center; color: #fff; border:1px solid #40B2DA;background: #40B2DA;position: absolute;bottom: -1px;left: -1px;}
+.class-detail .continue:hover{color:#fff;}
+.class-detail:hover{background:#F4F5F9;border-color:#40B2DA;}
+.class-detail:hover h3{color:#161616;}
+.class-detail.disabled .continue{ background-color: #eee;color:#525252;border-color: #eee;}
+.class-detail.disabled:hover .continue{border-color: #40B2DA;border-top-color: #eee;}
+
+
+/*认证步奏*/
+.company_identify{padding-bottom: 20px;}
+.identify-step{position:relative;width:500px;height:110px;}
+.identify-step li{font-size:14px; float:left;}
+.identify-step li .step-count{width:25px;height:25px;border-radius:20px;line-height:25px;display: block;}
+.step-going{width:170px;position:absolute;border:1px solid #b0b0b0;}
+.step-going.border-main {border-color: #40b2da;}
+.step-going.border-dashed {border-style: dashed;}
+.step-going.border-main {border-color: #40b2da;}
+.step-going.border-dashed {border-style: dashed;}
+.basic-info-detail{border:1px solid #ebeef1;margin:0 20px;}
+.real-name-head span{color:#858585;font-size: 12px;letter-spacing: 1px;}
+.real-name-detail{width:75%;float:right;font-size: 14px;}
+.real-name-detail em{margin-top:-2px;margin-left:5px;}
+.content-left-zoon{float: left;text-align: right;}
+.content-right-zoon{float: right;}
+.unit-style .content-left-zoon{width:23%;font-size:14px;line-height: 35px;}
+.unit-style .content-right-zoon{width:75%;font-size: 14px;}
+.unit-style .content-right-zoon em{margin-top:-2px;margin-left:5px;}
+.unit-style{padding:0 20px;clear:both;}
+.unit-style-sel{height:35px;font-size:14px;color:#444;padding-left:10px;}
+.unit-style-sel.h6{font-size: 12px;color:#a9a9a9;width:186px;}
+.various_licence{display: none;}
+
+.identify-detail{background:#f5f6fa;border:1px solid #c6c6c6;padding:30px;}
+
+.success-logo {width: 36px;height: 36px;border-radius: 18px;display: block;float: left;}
+.success-title{margin-left: 10px;color:#2d2d2d;}
+.success-title p{font-size: 12px;}
+.success-title a{display: block;padding-left: 20px;margin-top:30px;}
+.identify-info{border:1px solid #c6c6c6;padding:30px 0;padding-left: 76px;font-size: 14px;color:#2d2d2d;margin-top:20px;}
+.identify-info span{display: block;color:#3b3b3b;}
+.info-left{width:12%;text-align: right;float: left;}
+.info-right{width:87%;float: right;}
+.time .long-time {margin-top: 8px;margin-left: 5px;}
+.upload-content .button-upload{display: block;width: 100%;position:relative;height: 60px;background: url(../images/ico_add.png) no-repeat center center; z-index: 99;  border: 1px solid #ddd;}
+.upload-content .button-upload:hover{background: url(../images/ico_add.png) no-repeat center center; }
+
+/*认证状态*/
+body{min-width: 1300px;}
+.indentify-return{min-height: 140px;}
+.indentify-return .icon-identify{width: 54px;height: 65px;}
+.indetify-privilege li{height:22px;line-height: 22px;}
+.ident-return-info .text-main-reverse{padding: 4px 30px;margin-top: 5px;}
+.indentify-return-details{height: 170px;padding: 20px 30px; }
+.indentify-return-details p{line-height: 30px;}
+.indentify-return-details a{display: inline-block;}
+.identify-protect{height: 74px;padding: 20px 30px;}
+.identify-protect p{width: 100%;overflow: hidden;max-height: 25px;position: relative;z-index: 8;}
+.square-box{width: 515px;height: 250px;background: url(../images/bg_5.png) no-repeat; padding: 0 4px;position: relative;margin-right: 55px;}
+.stamp{position: absolute;width: 99px;height: 102px;display: block;bottom: 28px;right: 45px;}
+.stamp img{width: 100%;height: 100%;}
+
+

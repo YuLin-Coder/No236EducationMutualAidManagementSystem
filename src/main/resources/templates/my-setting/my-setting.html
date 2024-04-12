@@ -1,0 +1,329 @@
+﻿<!doctype html>
+<html class="no-js" lang="en">
+<head>
+    <meta charset="utf-8">  
+    <title>我的设置</title>
+    <link rel="stylesheet" href="../css/vendor/bootstrap.min.css">
+    <link rel="stylesheet" href="../css/vendor/font-awesome.min.css">
+    <link rel="stylesheet" href="../css/style.css">
+    <style>
+        .btn1{
+            width: 15px;
+            height: 15px;
+            margin-top: -4px;
+            margin-left: 15px;
+            margin-right: 40px;
+        }
+        .btn3{
+            font-size:1.3rem;
+            display:none;
+            text-align:center;
+            margin:.5rem auto
+        }
+    </style>
+</head>
+
+<body>
+<header class="header-area" style="margin-left: -20px">
+    <div class="main-header d-none d-lg-block">
+        <div class="header-top black-bg">
+            <div class="container">
+                <div class="row align-items-center">
+                    <div class="col-lg-6">
+                        <div class="top-left-navigation">
+                            <ul class="nav align-items-center">
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="col-lg-6 d-flex justify-content-end">
+                        <ul class="user-info-block">
+                            <li><a href="../my-setting/my-setting.html"><i class="fa fa-user-circle"></i>我的信息</a></li>
+                            <li><a href="../login.html" style="text-decoration: none"><i class="fa fa-sign-in"></i> 注销 </a></li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="header-main-area black-soft sticky">
+            <div class="container">
+                <div class="row align-items-center position-relative">
+
+                    <div class="col-auto">
+                        <div class="logo">
+                            <a href="../index.html">
+                                <img src="../img/teach/3.jpg" alt="Brand Logo" style="height: 91px;width: 160px">
+                            </a>
+                        </div>
+                    </div>
+
+                    <div class="col-auto position-static">
+                        <div class="main-menu-area">
+                            <div class="main-menu">
+
+                                <nav class="desktop-menu">
+                                    <ul>
+
+                                        <li class="position-static"><a href="../index.html" style="text-decoration: none">教育主页</a>
+
+                                        </li>
+                                        <li><a href="../dynamic/Dynamic.html" style="text-decoration: none">
+                                            交流动态 </a>
+                                        </li>
+                                        <li><a href="../my-message/my-message.html" style="text-decoration: none">我的平台</a>
+                                        </li>
+                                        <li><a href="../chat/my-chat.html" style="text-decoration: none">我的好友</a>
+                                        </li>
+                                        <li><a href="../contact-us/contact-us.html" style="text-decoration: none">联系我们</a></li>
+                                    </ul>
+                                </nav>
+
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="col-auto ml-auto">
+                        <div class="header-right">
+                            <div class="header-configure-area">
+                                <ul class="nav">
+
+
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+        </div>
+    </div>
+</header>
+   
+    <main>       
+        <div class="breadcrumb-area breadcrumb-img bg-img" data-bg="../../img/teach/4.jpg">
+            <div class="container">
+                <div class="row">
+                    <div class="col-12">
+                        <div class="breadcrumb-wrap">
+                            <nav aria-label="breadcrumb">
+                                <h3 class="breadcrumb-title">欢迎来到我的信息界面</h3>
+                                <ul class="breadcrumb justify-content-center">
+                                    <li class="breadcrumb-item"><a href="../index.html"><i class="fa fa-home"></i></a></li>
+                                    <li class="breadcrumb-item active" aria-current="page">主界面</li>
+                                </ul>
+                            </nav>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        
+        <div class="my-account-wrapper section-padding">
+            <div class="container">
+                <div class="section-bg-color">
+                    <div class="row">
+                        <div class="col-lg-12">
+                            
+                            <div class="myaccount-page-wrapper">
+                               
+                                <div class="row">
+                                    <div class="col-lg-3 col-md-4">
+                                        <div class="myaccount-tab-menu nav" role="tablist" style="margin-top: -58px;">
+                                        	<h3 style="margin-bottom: 30px;">个人信息</h3>
+                                            <a href="#Introduction" class="active" data-toggle="tab"><i class="fa fa-dashboard"></i>自我简介</a>
+<!--                                            <a href="#MyCollection" data-toggle="tab" id="clickCollect"><i class="fa fa-map-marker"></i>我的收藏</a>-->
+                                            <a href="#MySetting" data-toggle="tab"><i class="fa fa-user"></i>修改密码</a>
+                                        </div>
+                                    </div>
+                                   
+                                    <div class="col-lg-9 col-md-8">
+                                        <div class="tab-content" id="myaccountContent">
+                                            
+                                            <div class="tab-pane fade show active" id="Introduction" role="tabpanel">
+                                                <div class="myaccount-content">
+                                                    <h5>Hello, <strong id="myName"></strong></h5>
+                                                    <div class="welcome">                                                       
+                                                        <div class="checkout-page-wrapper section-padding">
+            <div class="container" style="margin-top: -80px;">            
+                <div class="row">                   
+                    <div class="col-lg-6">
+                        <div class="checkout-billing-details-wrap">                        
+                            <div class="billing-form-wrap">                               
+                                    <div class="single-input-item">                                                                                                                
+                                        <label for="netName" class="required">netName(网名)</label>
+                                        <input type="text" id="netName" placeholder="netName" required />
+                                    </div>
+                                    <div class="single-input-item">
+                                        <label for="email" class="required">Email Address(邮箱地址)</label>
+                                        <input type="email" id="email" placeholder="Email Address" required />
+                                    </div>
+
+                                    <div class="single-input-item">
+                                        <label for="country" class="required">Country(国家)</label>
+                                        <input type="text" id="country" placeholder="Country" />
+                                    </div>                                   
+                                  
+                                    <div class="single-input-item">
+                                        <label for="phone" class="required">Phone(电话)</label>
+                                        <input type="text" id="phone" placeholder="Phone" />
+                                    </div>
+                                                                    
+                                    <div class="single-input-item">
+                                        <label for="Signature">Personalized Signature(个性签名)</label>
+                                        <textarea name="Signature" id="signature" cols="30" rows="2" placeholder="Not the same as their own."></textarea>
+                                    </div>
+                                    <div class="summary-footer-area">                                      
+                                        <button type="submit" class="btn btn-sqr" id="update" onclick="updateUser()">确定修改</button>
+                                    </div>                               
+                            </div>
+                        </div>
+                    </div>
+                 	<!--本人头像-->
+                    <div class="col-lg-6">
+                        <div style="margin-left: 95px">
+                            <img src="" id="personImg" style="width: 200px;height: 200px"><br>
+                            <div style="margin-top: 20px">
+                                <button class="btn btn-sqr" onclick="loadWord()" id="uploadHead">上传</button>
+                                <button class="btn btn-sqr" style="margin-left: 10px" onclick="uploadSure()">确定修改</button>
+                                <input type="file" style="display:none" accept="image/*" id="upload"/>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+                                                    </div>                                                   
+                                                </div>
+                                            </div>
+                                            
+                                            <div class="tab-pane fade" id="MyAccount" role="tabpanel">
+                                                <div class="myaccount-content">
+                                                    <h5>我的账户</h5>
+                                                    <div class="myaccount-table table-responsive text-center">
+                                                        	我的余额：
+                                                        <input type="text" style="border: none;width: 60px" id="account">元
+                                                        <button id="save" class="btn btn-sqr" style="margin-left: 30px" onclick="saveMoney()">充值</button>
+                                                        <button id="take" class="btn btn-sqr" onclick="takeMoneyHtml()">提现</button>
+                                                    </div>
+                                                    <!--提现界面-->
+                                                    <div id="takeMoneyHtml" style="display: none">
+                                                        <div style="margin-left: 80px;margin-top: 20px">
+                                                            <span>请输入提现金额:</span>
+                                                            <input type="text" style="width: 200px;height: 40px" id="takeMoneyNum">
+                                                        </div>
+                                                        <div style="margin-left: 80px;margin-top: 20px">
+                                                            <button class="btn btn-sqr" onclick="takeMoney()" style="width: 320px">确定</button>
+                                                        </div>
+                                                    </div>
+                                                    <!-- 弹框 -->
+                                                    <div id="accountHtml" class="btn3">
+                                                        请输入您需要充值的数量：<input type="text" id="saveMoneyNum" style="width: 200px">(非小数)<br>
+                                                        <span>选择支付方式</span>
+                                                        <input type="checkbox" name="box" id="vx" value="0"><label  for="vx" style="cursor: pointer">微信</label>
+                                                        <input type="checkbox" name="box" id="zfb" value="1"><label  for="zfb" style="cursor: pointer">支付宝</label>
+                                                        <input type="checkbox" name="box" id="yhk" value="2"><label  for="yhk" style="cursor: pointer">银行卡</label>
+                                                        <button class="btn btn-sqr" onclick="pay()" style="margin-left: 450px">确认</button>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            
+                                            <div class="tab-pane fade" id="MyBankCard" role="tabpanel">
+                                                <div class="myaccount-content">
+                                                    <h5>银行卡</h5>
+                                                    <div class="myaccount-table table-responsive text-center">
+                                                        <!--银行卡列表-->
+                                                        <div id="bankCardHtml">
+                                                        </div>
+                                                        <div id="deleteCardHtml" style="display: none">
+                                                            <h4 style="text-align: center;margin-top: 15px">是否确定删除？</h4><br>
+                                                            <button class="btn btn-sqr" style="margin-right: 50px" onclick="CancelHtml()">取消</button>
+                                                            <button class="btn btn-sqr" onclick="deleteCard()">确定</button>
+                                                        </div>
+                                                        <div id="addCardHtml" class="btn3">
+                                                            填写银行的名称：<input type="text" id="addName">(注：请填写正确的名称)<br>
+                                                            填写银行卡卡号：<input type="text" id="addCard">(注：请填写正确的卡号)<br>
+                                                            <button class="btn btn-sqr" style="margin-left: 500px" onclick="beforeInsertCardRepeat()">确定添加</button>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            
+                                            <div class="tab-pane fade" id="MySetting" role="tabpanel">
+                                            	<div class="myaccount-content">
+                                                    <h5>修改密码</h5>
+                                                    <div class="setting" style="width: 300px">
+                                                    	请输入原密码：<input type="password" id="passwd"><br>
+                                                    	请输入新密码：<input type="password" id="newpasswd1"><br>
+                                                    	请再次输入：<input type="password" id="newpasswd2">
+                                                        <button class="btn btn-sqr" onclick="updatePassword()" style="margin-top: 10px">确定修改</button>
+                                                    </div>
+                                                </div>
+                                            </div>
+
+                                            <div class="tab-pane fade" id="MyArticle" role="tabpanel">
+                                                <div class="myaccount-content">
+                                                    <h5>我的物品</h5>
+                                                    <a href="#" onclick="changeHtml(1)" id="param1">箱子</a>
+                                                    <a href="#" onclick="changeHtml(2)" id="param2" style="margin-left: 20px">钥匙</a>
+                                                    <a href="#" onclick="changeHtml(3)" id="param3" style="margin-left: 20px">武器皮肤</a>
+                                                    <a href="#" onclick="changeHtml(4)" id="param4" style="margin-left: 20px">角色</a>
+                                                    <a href="#" onclick="changeHtml(5)" id="param5" style="margin-left: 20px">喷漆</a>
+                                                    <a href="#" onclick="changeHtml(6)" id="param6" style="margin-left: 20px">贴纸</a>
+                                                    <div class="account-details-form" id="MyArticleC">
+
+                                                    </div>
+                                                </div>
+                                            </div>
+
+                                            <div class="tab-pane fade" id="MyPay" role="tabpanel">
+                                                <div class="myaccount-content">
+                                                    <h5>支付方式</h5>
+                                                    <div style="font-size: 20px">
+                                                        <div id="payStyle" style="margin-top: 10px">
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            
+                                            <div class="tab-pane fade" id="MyCollection" role="tabpanel">
+                                                <div class="myaccount-content">
+                                                    <h5>我的收藏</h5>
+                                                    <div class="account-details-form" id="collectShoes">
+                                                    </div>
+                                                </div>
+                                            </div>
+
+                                            <div class="tab-pane fade" id="MyIsSell" role="tabpanel">
+                                                <div class="myaccount-content">
+                                                    <h5>正在售卖的商品</h5>
+                                                    <div class="account-details-form" id="MyIsSellHtml">
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div> 
+                                </div>
+                            </div> 
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>      
+    </main>
+    <script src="../js/vendor/jquery-3.3.1.min.js"></script>
+    <script src="../js/vendor/bootstrap.min.js"></script>
+    <script src="../js/main.js"></script>
+    <script src="../js/layer/layer.js"></script>
+    <script src="../js/file/Q.js"></script>
+<script src="../js/file/Q.Uploader.js"></script>
+    <script src="my-setting.js"></script>
+    <script src="../js/jquery.cookie.js"></script>
+    <script src="../shop/Shop.js"></script>
+    <script src="../js/md5.js"></script>
+    <script src="../index.js"></script>
+    <script src="../cart/Cart.js"></script>
+    <script src="../common.js"></script>
+
+</body>
+
+</html>

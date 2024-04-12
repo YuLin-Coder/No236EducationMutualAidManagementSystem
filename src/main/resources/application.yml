@@ -1,0 +1,23 @@
+spring:
+  datasource:
+    driver-class-name: com.mysql.jdbc.Driver
+    name: boot
+    url: jdbc:mysql://localhost:3306/no236_teaching?useUnicode=true&characterEncoding=utf-8&useSSL=true&serverTimezone=UTC
+    username: root
+    password: 123456
+  resources:
+    static-locations: classpath:/templates/,classpath:/static/
+  servlet:
+    multipart:
+      max-file-size: 100MB
+      max-request-size: 1000MB
+
+mybatis:
+  mapper-locations: classpath:mapper/*.xml
+  type-aliases-package: com.example.teach.bean
+
+server:
+  port: 8080
+logging:
+  level:
+    com.example.game.mapper: info

@@ -1,0 +1,277 @@
+﻿<!doctype html>
+<html class="no-js" lang="en">
+<head>
+    <meta charset="utf-8">  
+    <title>我的好友</title>
+    <link rel="stylesheet" href="../css/vendor/bootstrap.min.css">
+    <link rel="stylesheet" href="../css/vendor/font-awesome.min.css">
+    <link rel="stylesheet" href="../css/style.css">
+    <style>
+        .containerChat {
+            height: 100%;
+            width: 100%;
+            display: flex;
+            margin: 0;
+        }
+        .chatright {
+            background-color: #ffffff;
+            width: 100%;
+            height: 100%;
+        }
+        .chatright .top {
+            height: 10%;
+            display: flex;
+            align-items: center;
+            padding-left: 30px;
+        }
+        .chatright .center {
+            background-color: #edf5f8;
+            height: 65%;
+            overflow-y: scroll;
+        }
+        .chatright .center ul {
+            padding: 10px;
+        }
+        .chatright .center li {
+            margin: 10px;
+            width: 100%;
+        }
+        .chatright .center p{
+            display: inline-block;
+        }
+        .msgcard {
+            margin: 0 10px 0 10px;
+            background-color: white;
+            border-radius: 10px;
+            padding: 10px;
+            max-width: 60%;
+        }
+        .msgleft {
+            float: left;
+            align-self:flex-start;
+        }
+        .msgright {
+            float: right;
+            align-self: flex-end;
+        }
+        .chatright .footer {
+            height: 25%;
+            background-color: #FBFCFC;
+            text-align: right;
+        }
+        .sendbtn {
+            height: 40px;
+            width: 80px;
+            border-radius: 10px;
+            background-color: #58D68D;
+            color: white;
+            font-weight: bold;
+            margin:10px 20px 0 0;
+        }
+    </style>
+</head>
+
+<body>
+<header class="header-area" style="margin-left: -20px">
+    <div class="main-header d-none d-lg-block">
+        <div class="header-top black-bg">
+            <div class="container">
+                <div class="row align-items-center">
+                    <div class="col-lg-6">
+                        <div class="top-left-navigation">
+                            <ul class="nav align-items-center">
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="col-lg-6 d-flex justify-content-end">
+                        <ul class="user-info-block">
+                            <li><a href="../my-setting/my-setting.html"><i class="fa fa-user-circle"></i>我的信息</a></li>
+                            <li><a href="../login.html" style="text-decoration: none"><i class="fa fa-sign-in"></i> 注销 </a></li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="header-main-area black-soft sticky">
+            <div class="container">
+                <div class="row align-items-center position-relative">
+
+                    <div class="col-auto">
+                        <div class="logo">
+                            <a href="../index.html">
+                                <img src="../img/teach/3.jpg" alt="Brand Logo" style="height: 91px;width: 160px">
+                            </a>
+                        </div>
+                    </div>
+
+                    <div class="col-auto position-static">
+                        <div class="main-menu-area">
+                            <div class="main-menu">
+
+                                <nav class="desktop-menu">
+                                    <ul>
+
+                                        <li class="position-static"><a href="../index.html" style="text-decoration: none">教育主页</a>
+
+                                        </li>
+                                        <li><a href="../dynamic/Dynamic.html" style="text-decoration: none">
+                                            交流动态 </a>
+                                        </li>
+                                        <li><a href="../my-message/my-message.html" style="text-decoration: none">我的平台</a>
+                                        </li>
+                                        <li class="active"><a href="my-chat.html" style="text-decoration: none">我的好友</a>
+                                        </li>
+                                        <li><a href="../contact-us/contact-us.html" style="text-decoration: none">联系我们</a></li>
+                                    </ul>
+                                </nav>
+
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="col-auto ml-auto">
+                        <div class="header-right">
+                            <div class="header-configure-area">
+                                <ul class="nav">
+
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+        </div>
+    </div>
+</header>
+   
+    <main>       
+        <div class="breadcrumb-area breadcrumb-img bg-img" data-bg="../../img/teach/4.jpg">
+            <div class="container">
+                <div class="row">
+                    <div class="col-12">
+                        <div class="breadcrumb-wrap">
+                            <nav aria-label="breadcrumb">
+                                <h3 class="breadcrumb-title">欢迎来到我的好友界面</h3>
+                                <ul class="breadcrumb justify-content-center">
+                                    <li class="breadcrumb-item"><a href="../index.html"><i class="fa fa-home"></i></a></li>
+                                    <li class="breadcrumb-item active" aria-current="page">主界面</li>
+                                </ul>
+                            </nav>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        
+        <div class="my-account-wrapper section-padding">
+            <div class="container">
+                <div class="section-bg-color">
+                    <div class="row">
+                        <div class="col-lg-12">
+                            
+                            <div class="myaccount-page-wrapper">
+                               
+                                <div class="row">
+                                    <div class="col-lg-3 col-md-4">
+                                        <div class="myaccount-tab-menu nav" role="tablist" style="margin-top: -58px;" id="myChatPerson">
+                                        </div>
+                                    </div>
+                                   
+                                    <div class="col-lg-9 col-md-8">
+                                        <div class="tab-content">
+
+                                            <div class="tab-pane fade show active" id="MyChat" role="tabpanel">
+                                                <div class="myaccount-content">
+                                                    <div class="welcome">
+                                                        <div class="checkout-page-wrapper section-padding">
+                                                            <div class="container" style="margin-top: -80px;">
+                                                                <img src="../img/logo/delete.jpg" style="float: right;width: 40px;height: 40px;cursor: pointer" onclick="chatHtml()">
+                                                                <div class="row">
+                                                                    <div class="col-lg-6">
+                                                                        <div class="checkout-billing-details-wrap">
+                                                                            <div class="billing-form-wrap">
+                                                                                    <div class="single-input-item">
+                                                                                        <label for="netName" class="required">netName(网名)</label>
+                                                                                        <input type="text" id="netName" placeholder="netName" required readonly/>
+                                                                                    </div>
+                                                                                    <div class="single-input-item">
+                                                                                        <label for="email" class="required">Email Address(邮箱地址)</label>
+                                                                                        <input type="email" id="email" placeholder="Email Address" required readonly/>
+                                                                                    </div>
+
+                                                                                    <div class="single-input-item">
+                                                                                        <label for="country" class="required">Country(国家)</label>
+                                                                                        <input type="text" id="country" placeholder="Country" readonly />
+                                                                                    </div>
+
+                                                                                    <div class="single-input-item">
+                                                                                        <label for="phone" class="required">Phone(电话)</label>
+                                                                                        <input type="text" id="phone" placeholder="Phone" readonly/>
+                                                                                    </div>
+
+                                                                                    <div class="single-input-item">
+                                                                                        <label for="Signature">Personalized Signature(个性签名)</label>
+                                                                                        <textarea name="Signature" id="signature" cols="30" rows="2" placeholder="Not the same as their own." readonly></textarea>
+                                                                                    </div>
+
+                                                                            </div>
+                                                                        </div>
+                                                                    </div>
+                                                                    <!--本人头像-->
+                                                                    <div class="col-lg-6" id="img">
+                                                                        <div style="margin-left: 95px">
+                                                                            <img src="" id="personImg" style="width: 200px;height: 200px"><br>
+                                                                            <div style="margin-top: 20px">
+                                                                                <button class="btn btn-sqr" onclick="chatLayerHtml()" id="chatting" style="width: 200px">私聊</button>
+                                                                            </div>
+                                                                        </div>
+                                                                    </div>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+
+                                        </div>
+                                    </div> 
+                                </div>
+                            </div> 
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>      
+    </main>
+    <div class="containerChat" style="display: none;height: 500px" id="chatHtml">
+        <div class="chatright">
+            <div class="top">
+                <img style="border-radius: 20px; vertical-align: middle;width: 35px;height: 35px;" src="../img/head.gif">
+                <span style="margin-left: 20px;" id="chatName"></span>
+            </div>
+            <div class="center" id="chatHtmlBuild">
+            </div>
+            <div class="footer">
+                <textarea maxlength="800" rows="5" cols="40" style="width: 100%; resize: none; border: #000000; " id="chatMess" placeholder="请在此输入要发送的内容..."></textarea>
+                <button class="sendbtn" style="cursor: pointer;" onclick="sendChat()">发送</button>
+            </div>
+        </div>
+    </div>
+    <div id="chatDeleteHtml" style="display: none">
+        <h4 style="text-align: center;margin-top: 15px">是否确定删除？</h4><br>
+        <button class="btn btn-sqr" style="margin-left: 90px" onclick="CancelCartHtml()">取消</button>
+        <button class="btn btn-sqr" style="margin-left: 50px" onclick="deleteUserChat()">确定</button>
+    </div>
+    <script src="../js/vendor/jquery-3.3.1.min.js"></script>
+    <script src="../js/vendor/bootstrap.min.js"></script>
+    <script src="../js/main.js"></script>
+    <script src="../js/layer/layer.js"></script>
+    <script src="../js/file/Q.js"></script>
+    <script src="../js/file/Q.Uploader.js"></script>
+    <script src="my-chat.js"></script>
+    <script src="../js/jquery.cookie.js"></script>
+</body>
+
+</html>

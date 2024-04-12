@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
+
+<mapper namespace="com.example.teach.mapper.ChatPersonMapper">
+        
+        <select id="selectChatPerson" resultType="com.example.teach.bean.User">
+                select * from user where id = #{id}
+        </select>
+
+        <select id="selectChatPerson02" resultType="com.example.teach.bean.User">
+                select * from user where name = #{userName}
+        </select>
+
+        <update id="updateChatPerson">
+                update user set person = #{chatName} where id = #{id};
+        </update>
+        
+        <select id="selectChatContent" resultType="com.example.teach.bean.User">
+                select * from user where name = #{name};
+        </select>
+
+        <select id="chatList" resultType="Chat">
+               select * from chat where sendName = #{sendName} and receiveName = #{receiveName}
+               or sendName = #{receiveName} and receiveName = #{sendName}
+        </select>
+
+        <insert id="sendChat">
+                insert into chat(sendName,receiveName,content,sendByName)
+                values (#{sendName},#{receiveName},#{content},#{sendByName})
+        </insert>
+
+        <update id="updateUserPerson">
+                update user set person = #{name} where name = #{userName};
+        </update>
+
+        <update id="updateOtherUser">
+                update user set person = #{person}  where id = #{id};
+        </update>
+
+        <update id="updateNowUser">
+                update user set person = #{name} where name = #{person};
+        </update>
+</mapper>
